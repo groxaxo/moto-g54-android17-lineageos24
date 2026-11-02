@@ -1,0 +1,146 @@
+# G54: keep native trustlets immutable and secure storage in guest userdata.
+on post-fs
+    mount tmpfs tmpfs /mnt/vendor/tzapp nodev nosuid noexec mode=0700,uid=1000,gid=1000,rootcontext=u:object_r:mobicore_data_file:s0
+    symlink /vendor/app/mcRegistry/020f0000000000000000000000000000.drbin /mnt/vendor/tzapp/020f0000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/020f0000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin /mnt/vendor/tzapp/020f0000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/020f0000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/031c0000000000000000000000000000.drbin /mnt/vendor/tzapp/031c0000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/031c0000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/031c0000000000000000000000000000.tlbin /mnt/vendor/tzapp/031c0000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/031c0000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/04010000000000000000000000000000.tlbin /mnt/vendor/tzapp/04010000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/04010000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/05060000000000000000000000000000.tabin /mnt/vendor/tzapp/05060000000000000000000000000000.tabin
+    restorecon /mnt/vendor/tzapp/05060000000000000000000000000000.tabin
+    symlink /vendor/app/mcRegistry/05070000000000000000000000000000.drbin /mnt/vendor/tzapp/05070000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/05070000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/05070000000000000000000000000000.tlbin /mnt/vendor/tzapp/05070000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/05070000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/05120000000000000000000000000001.drbin /mnt/vendor/tzapp/05120000000000000000000000000001.drbin
+    restorecon /mnt/vendor/tzapp/05120000000000000000000000000001.drbin
+    symlink /vendor/app/mcRegistry/05120000000000000000000000000001.tlbin /mnt/vendor/tzapp/05120000000000000000000000000001.tlbin
+    restorecon /mnt/vendor/tzapp/05120000000000000000000000000001.tlbin
+    symlink /vendor/app/mcRegistry/06090000000000000000000000000000.drbin /mnt/vendor/tzapp/06090000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/06090000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/06090000000000000000000000000000.tlbin /mnt/vendor/tzapp/06090000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/06090000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/07010000000000000000000000000000.tlbin /mnt/vendor/tzapp/07010000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/07010000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/0706000000000000000000000000004d.tlbin /mnt/vendor/tzapp/0706000000000000000000000000004d.tlbin
+    restorecon /mnt/vendor/tzapp/0706000000000000000000000000004d.tlbin
+    symlink /vendor/app/mcRegistry/07061000000000000000000000000000.tlbin /mnt/vendor/tzapp/07061000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/07061000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/07150000000000000000000000000000.drbin /mnt/vendor/tzapp/07150000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/07150000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/07150000000000000000000000000000.tlbin /mnt/vendor/tzapp/07150000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/07150000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/07170000000000000000000000000000.drbin /mnt/vendor/tzapp/07170000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/07170000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/07170000000000000000000000000000.tlbin /mnt/vendor/tzapp/07170000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/07170000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/08030000000000000000000000000000.tabin /mnt/vendor/tzapp/08030000000000000000000000000000.tabin
+    restorecon /mnt/vendor/tzapp/08030000000000000000000000000000.tabin
+    symlink /vendor/app/mcRegistry/08040000000000000000000000003419.tabin /mnt/vendor/tzapp/08040000000000000000000000003419.tabin
+    restorecon /mnt/vendor/tzapp/08040000000000000000000000003419.tabin
+    symlink /vendor/app/mcRegistry/08050000000000000000000000003419.drbin /mnt/vendor/tzapp/08050000000000000000000000003419.drbin
+    restorecon /mnt/vendor/tzapp/08050000000000000000000000003419.drbin
+    symlink /vendor/app/mcRegistry/08050000000000000000000000003419.tlbin /mnt/vendor/tzapp/08050000000000000000000000003419.tlbin
+    restorecon /mnt/vendor/tzapp/08050000000000000000000000003419.tlbin
+    symlink /vendor/app/mcRegistry/08110000000000000000000000000000.tabin /mnt/vendor/tzapp/08110000000000000000000000000000.tabin
+    restorecon /mnt/vendor/tzapp/08110000000000000000000000000000.tabin
+    symlink /vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.drbin /mnt/vendor/tzapp/40188311faf343488db888ad39496f9a.drbin
+    restorecon /mnt/vendor/tzapp/40188311faf343488db888ad39496f9a.drbin
+    symlink /vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.tlbin /mnt/vendor/tzapp/40188311faf343488db888ad39496f9a.tlbin
+    restorecon /mnt/vendor/tzapp/40188311faf343488db888ad39496f9a.tlbin
+    symlink /vendor/app/mcRegistry/5020170115e016302017012521300000.drbin /mnt/vendor/tzapp/5020170115e016302017012521300000.drbin
+    restorecon /mnt/vendor/tzapp/5020170115e016302017012521300000.drbin
+    symlink /vendor/app/mcRegistry/5020170115e016302017012521300000.tlbin /mnt/vendor/tzapp/5020170115e016302017012521300000.tlbin
+    restorecon /mnt/vendor/tzapp/5020170115e016302017012521300000.tlbin
+    symlink /vendor/app/mcRegistry/85fbf4ccc2fd4a32922a4e90c56179de.tabin /mnt/vendor/tzapp/85fbf4ccc2fd4a32922a4e90c56179de.tabin
+    restorecon /mnt/vendor/tzapp/85fbf4ccc2fd4a32922a4e90c56179de.tabin
+    symlink /vendor/app/mcRegistry/abcd270ea5c44c58bcd3384a2fa2539e.tabin /mnt/vendor/tzapp/abcd270ea5c44c58bcd3384a2fa2539e.tabin
+    restorecon /mnt/vendor/tzapp/abcd270ea5c44c58bcd3384a2fa2539e.tabin
+    symlink /vendor/app/mcRegistry/attpre_6716af0c135559728ae9e9754da47ccd.tabin /mnt/vendor/tzapp/attpre_6716af0c135559728ae9e9754da47ccd.tabin
+    restorecon /mnt/vendor/tzapp/attpre_6716af0c135559728ae9e9754da47ccd.tabin
+    symlink /vendor/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin /mnt/vendor/tzapp/e97c270ea5c44c58bcd3384a2fa2539e.tabin
+    restorecon /mnt/vendor/tzapp/e97c270ea5c44c58bcd3384a2fa2539e.tabin
+    symlink /data/vendor/mcRegistry/TbStorage /mnt/vendor/tzapp/TbStorage
+    restorecon /mnt/vendor/tzapp/TbStorage
+
+on post-fs-data
+    mkdir /data/vendor/mcRegistry 0770 system system
+    mkdir /data/vendor/mcRegistry/TbStorage 0700 system system
+    restorecon_recursive /data/vendor/mcRegistry
+
+    mkdir /data/vendor/mcRegistry/g54-tzapp 0700 system system
+    restorecon_recursive /data/vendor/mcRegistry
+    symlink /vendor/app/mcRegistry/020f0000000000000000000000000000.drbin /data/vendor/mcRegistry/g54-tzapp/020f0000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin /data/vendor/mcRegistry/g54-tzapp/020f0000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/031c0000000000000000000000000000.drbin /data/vendor/mcRegistry/g54-tzapp/031c0000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/031c0000000000000000000000000000.tlbin /data/vendor/mcRegistry/g54-tzapp/031c0000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/04010000000000000000000000000000.tlbin /data/vendor/mcRegistry/g54-tzapp/04010000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/05060000000000000000000000000000.tabin /data/vendor/mcRegistry/g54-tzapp/05060000000000000000000000000000.tabin
+    symlink /vendor/app/mcRegistry/05070000000000000000000000000000.drbin /data/vendor/mcRegistry/g54-tzapp/05070000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/05070000000000000000000000000000.tlbin /data/vendor/mcRegistry/g54-tzapp/05070000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/05120000000000000000000000000001.drbin /data/vendor/mcRegistry/g54-tzapp/05120000000000000000000000000001.drbin
+    symlink /vendor/app/mcRegistry/05120000000000000000000000000001.tlbin /data/vendor/mcRegistry/g54-tzapp/05120000000000000000000000000001.tlbin
+    symlink /vendor/app/mcRegistry/06090000000000000000000000000000.drbin /data/vendor/mcRegistry/g54-tzapp/06090000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/06090000000000000000000000000000.tlbin /data/vendor/mcRegistry/g54-tzapp/06090000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/07010000000000000000000000000000.tlbin /data/vendor/mcRegistry/g54-tzapp/07010000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/0706000000000000000000000000004d.tlbin /data/vendor/mcRegistry/g54-tzapp/0706000000000000000000000000004d.tlbin
+    symlink /vendor/app/mcRegistry/07061000000000000000000000000000.tlbin /data/vendor/mcRegistry/g54-tzapp/07061000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/07150000000000000000000000000000.drbin /data/vendor/mcRegistry/g54-tzapp/07150000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/07150000000000000000000000000000.tlbin /data/vendor/mcRegistry/g54-tzapp/07150000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/07170000000000000000000000000000.drbin /data/vendor/mcRegistry/g54-tzapp/07170000000000000000000000000000.drbin
+    symlink /vendor/app/mcRegistry/07170000000000000000000000000000.tlbin /data/vendor/mcRegistry/g54-tzapp/07170000000000000000000000000000.tlbin
+    symlink /vendor/app/mcRegistry/08030000000000000000000000000000.tabin /data/vendor/mcRegistry/g54-tzapp/08030000000000000000000000000000.tabin
+    symlink /vendor/app/mcRegistry/08040000000000000000000000003419.tabin /data/vendor/mcRegistry/g54-tzapp/08040000000000000000000000003419.tabin
+    symlink /vendor/app/mcRegistry/08050000000000000000000000003419.drbin /data/vendor/mcRegistry/g54-tzapp/08050000000000000000000000003419.drbin
+    symlink /vendor/app/mcRegistry/08050000000000000000000000003419.tlbin /data/vendor/mcRegistry/g54-tzapp/08050000000000000000000000003419.tlbin
+    symlink /vendor/app/mcRegistry/08110000000000000000000000000000.tabin /data/vendor/mcRegistry/g54-tzapp/08110000000000000000000000000000.tabin
+    symlink /vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.drbin /data/vendor/mcRegistry/g54-tzapp/40188311faf343488db888ad39496f9a.drbin
+    symlink /vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.tlbin /data/vendor/mcRegistry/g54-tzapp/40188311faf343488db888ad39496f9a.tlbin
+    symlink /vendor/app/mcRegistry/5020170115e016302017012521300000.drbin /data/vendor/mcRegistry/g54-tzapp/5020170115e016302017012521300000.drbin
+    symlink /vendor/app/mcRegistry/5020170115e016302017012521300000.tlbin /data/vendor/mcRegistry/g54-tzapp/5020170115e016302017012521300000.tlbin
+    symlink /vendor/app/mcRegistry/85fbf4ccc2fd4a32922a4e90c56179de.tabin /data/vendor/mcRegistry/g54-tzapp/85fbf4ccc2fd4a32922a4e90c56179de.tabin
+    symlink /vendor/app/mcRegistry/abcd270ea5c44c58bcd3384a2fa2539e.tabin /data/vendor/mcRegistry/g54-tzapp/abcd270ea5c44c58bcd3384a2fa2539e.tabin
+    symlink /vendor/app/mcRegistry/attpre_6716af0c135559728ae9e9754da47ccd.tabin /data/vendor/mcRegistry/g54-tzapp/attpre_6716af0c135559728ae9e9754da47ccd.tabin
+    symlink /vendor/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin /data/vendor/mcRegistry/g54-tzapp/e97c270ea5c44c58bcd3384a2fa2539e.tabin
+    symlink /data/vendor/mcRegistry/TbStorage /data/vendor/mcRegistry/g54-tzapp/TbStorage
+    restorecon_recursive /data/vendor/mcRegistry/g54-tzapp
+    umount /mnt/vendor/tzapp
+    mount none /data/vendor/mcRegistry/g54-tzapp /mnt/vendor/tzapp bind
+    restorecon /mnt/vendor/tzapp/020f0000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/020f0000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/031c0000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/031c0000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/04010000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/05060000000000000000000000000000.tabin
+    restorecon /mnt/vendor/tzapp/05070000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/05070000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/05120000000000000000000000000001.drbin
+    restorecon /mnt/vendor/tzapp/05120000000000000000000000000001.tlbin
+    restorecon /mnt/vendor/tzapp/06090000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/06090000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/07010000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/0706000000000000000000000000004d.tlbin
+    restorecon /mnt/vendor/tzapp/07061000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/07150000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/07150000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/07170000000000000000000000000000.drbin
+    restorecon /mnt/vendor/tzapp/07170000000000000000000000000000.tlbin
+    restorecon /mnt/vendor/tzapp/08030000000000000000000000000000.tabin
+    restorecon /mnt/vendor/tzapp/08040000000000000000000000003419.tabin
+    restorecon /mnt/vendor/tzapp/08050000000000000000000000003419.drbin
+    restorecon /mnt/vendor/tzapp/08050000000000000000000000003419.tlbin
+    restorecon /mnt/vendor/tzapp/08110000000000000000000000000000.tabin
+    restorecon /mnt/vendor/tzapp/40188311faf343488db888ad39496f9a.drbin
+    restorecon /mnt/vendor/tzapp/40188311faf343488db888ad39496f9a.tlbin
+    restorecon /mnt/vendor/tzapp/5020170115e016302017012521300000.drbin
+    restorecon /mnt/vendor/tzapp/5020170115e016302017012521300000.tlbin
+    restorecon /mnt/vendor/tzapp/85fbf4ccc2fd4a32922a4e90c56179de.tabin
+    restorecon /mnt/vendor/tzapp/abcd270ea5c44c58bcd3384a2fa2539e.tabin
+    restorecon /mnt/vendor/tzapp/attpre_6716af0c135559728ae9e9754da47ccd.tabin
+    restorecon /mnt/vendor/tzapp/e97c270ea5c44c58bcd3384a2fa2539e.tabin
+    restorecon /mnt/vendor/tzapp/TbStorage

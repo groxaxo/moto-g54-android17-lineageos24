@@ -1,0 +1,4 @@
+; G54 public camera-property mapping retained from native Android16.
+(typeattributeset vendor_persist_camera_prop_202504 (vendor_persist_camera_prop))
+(expandtypeattribute (vendor_persist_camera_prop_202504) true)
+(typeattribute vendor_persist_camera_prop_202504)

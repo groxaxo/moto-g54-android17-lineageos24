@@ -1,0 +1,10 @@
+Independent Moto G54 Android 17 port notes.
+
+The file patches/vintf/compatibility_matrix.6.xml is a generated compatibility
+matrix incorporating Android Open Source Project / LineageOS hardware-interface
+requirements and corresponding kernel-configuration requirements. Its original
+input provenance comment is preserved. Apache License 2.0 applies to the AOSP
+hardware-interface material; see LICENSES/Apache-2.0.txt and CREDITS.md.
+
+Android, LineageOS, Motorola, and Trustonic names identify the relevant projects
+or hardware. No affiliation, endorsement, or official device support is claimed.

@@ -1,0 +1,1 @@
+(allow init mnt_vendor_trustlet_file (dir (mounton)))

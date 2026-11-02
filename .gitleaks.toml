@@ -1,0 +1,6 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "SHA1 identifier of the publicly distributed AOSP development AVB public key; not private signing material"
+regexes = ['''cdbb77177f731920bbe0a0f94f84d9038ae0617d''']

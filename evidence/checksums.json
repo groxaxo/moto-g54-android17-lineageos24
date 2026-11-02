@@ -1,0 +1,17 @@
+{
+  "upstream_release": "https://github.com/eyzner/LineageOS-GSI/releases/tag/lineage-24.0-20261029",
+  "upstream_asset": "lineage-24.0-20261029-UNOFFICIAL-arm64_bvN.img.xz",
+  "upstream_compressed_sha256": "e6096462437491afcd309638a7ff42ab4ff2255396f1bf225af0783b6f0ad703",
+  "upstream_raw_bytes": 2400296960,
+  "upstream_raw_sha256": "b200c87fa58aaa24bb1299b0e3c624a0a7421d9b86872f2476722f95f67c9df0",
+  "tested_r6_clean_system_raw_sha256": "33440543f58f027975f8c564c2c4dfbea3c7e6a0e0b8602f24a3d0cdaab83436",
+  "tested_r6_image_distributed": false,
+  "note": "Reference hash of a clean system candidate, not a live handset dump; no byte-identical rebuild claim.",
+  "patch_sha256": {
+    "patches/vintf/compatibility_matrix.6.xml": "a58b9c5a7611b7547ee79ed04a11317160b067488c072ba42efdd9c2f6f0f583",
+    "patches/vintf/compatibility_matrix.g54.xml": "b067a730489d830921d84f7e25fa7bf3e60f6de320b1457a257a9e7d6f8d768c",
+    "patches/init/00-g54-trustonic-registry.rc": "6a134974fd672e2cbd30127ccc614033ebccae8c0bb051b9aa10a1dbde6048ab",
+    "patches/selinux/202504-camera-compat.cil": "250fbffa8132ee96d404edbe0d93f72cfdfba331bcfc40ef8440082d89b22c27",
+    "patches/selinux/trustonic-mount.cil": "e9e0c424b5016929e135f6c3a6b0b11df4730f3c876ae9ecc3e1f0d55d5f9cde"
+  }
+}

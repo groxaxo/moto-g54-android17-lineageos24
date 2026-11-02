@@ -1,0 +1,53 @@
+{
+  "test_date_utc": "2026-11-02",
+  "device": {
+    "model": "Motorola Moto G54 5G",
+    "sku": "XT2343-2",
+    "codename": "cancunf",
+    "tested_device_count": 1
+  },
+  "starting_system": {
+    "android": 16,
+    "already_rooted": true,
+    "bootloader_already_unlocked": true,
+    "kernel": "5.10.240-DragonHeart"
+  },
+  "guest": {
+    "android": 17,
+    "api": 37,
+    "lineage_version": "24.0-20261029-UNOFFICIAL-",
+    "revision": "r6",
+    "method": "persistent DSU",
+    "slot": "dsu",
+    "userdata_bytes": 8589934592
+  },
+  "observed": {
+    "boot_completed": true,
+    "device_provisioned": true,
+    "user_setup_complete": true,
+    "normal_restart_returned_android17": true,
+    "pin_enrolled": true,
+    "post_restart_pin_unlock": true,
+    "guest_user_state_after_unlock": "RUNNING_UNLOCKED",
+    "existing_guest_app_retained": true,
+    "selinux": "Enforcing",
+    "wifi_validated": true,
+    "native_kernel_bytes_unchanged": true,
+    "native_vendor_code_unchanged": true,
+    "original_system_and_userdata_retained": true,
+    "guest_userdata_recreated_during_r5_r6_updates": false,
+    "full_system_readback_verified": true,
+    "dsu_lp_metadata_unchanged": true
+  },
+  "limits": {
+    "cellular": "SIM loaded; No service; pre-upgrade baseline unknown",
+    "calls_mobile_data_ims": "not validated",
+    "camera_media_biometrics_bluetooth_nfc": "not fully validated",
+    "other_variants_and_stock_kernels": "not validated",
+    "cts_vts_play_integrity": "not validated",
+    "strict_neverallow_check": "inherited baseline failures remain; comparison showed no new failures",
+    "full_personal_data_backup": "not made",
+    "complete_reproducible_r6_builder_published": false,
+    "flashable_images_published": false
+  }
+}
