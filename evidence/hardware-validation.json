@@ -1,0 +1,223 @@
+{
+  "test_dates_utc": [
+    "2026-11-02",
+    "2026-11-03"
+  ],
+  "device": {
+    "sku": "XT2343-2",
+    "codename": "cancunf",
+    "tested_device_count": 1
+  },
+  "system": {
+    "android": 17,
+    "api": 37,
+    "revision": "r6"
+  },
+  "scope": "Bounded API and data-path tests on one device; not exhaustive hardware certification",
+  "results": {
+    "bluetooth": {
+      "status": "radio discovery and advertising verified; pairing/audio untested",
+      "classic_discovery_started": true,
+      "classic_devices_found": 7,
+      "ble_advertisers_found": 23,
+      "ble_scan_error": 0,
+      "advertising_start_result": 0,
+      "nearby_names_addresses_recorded": false,
+      "paired_accessory_selected": false
+    },
+    "wifi": {
+      "https_status": 204,
+      "validated": true,
+      "off_on_reconnect_validated": true,
+      "local_only_hotspot_started": true,
+      "hotspot_closed": true,
+      "wifi_validated_after_hotspot": true,
+      "hotspot_client_internet_tethering": "untested"
+    },
+    "cameras": {
+      "status": "exposed rear and front streams/JPEGs verified at 640x480",
+      "tested_camera_count": 2,
+      "frames_received": [
+        11,
+        15
+      ],
+      "valid_jpeg_dimensions": [
+        [
+          640,
+          480
+        ],
+        [
+          640,
+          480
+        ]
+      ],
+      "torch_on_callback": true,
+      "all_camera_modes_quality_and_auxiliary_lenses": "untested"
+    },
+    "camera_recording": {
+      "h264_aac_container_valid": true,
+      "duration_us": 3117600,
+      "width": 640,
+      "height": 480,
+      "recording_deleted_on_device": true,
+      "recording_exported": false
+    },
+    "video_codecs": {
+      "hardware_decoder": "c2.mtk.avc.decoder",
+      "decoded_frames": 24,
+      "rendered_frames": 24,
+      "hardware_encoder": "c2.mtk.avc.encoder",
+      "encoder_size": [
+        640,
+        480
+      ],
+      "encoded_packets": 8,
+      "encoder_eos": true,
+      "initial_probe_note": "160x120 was below advertised minimum height 160; supported 640x480 encoding passed",
+      "widevine_reported_security_level": "L1",
+      "protected_stream_and_certification": "untested"
+    },
+    "audio": {
+      "microphone_recording": true,
+      "microphone_samples": 16000,
+      "non_silent_input": true,
+      "speaker_route_type": 2,
+      "output_samples_written": 16000,
+      "playback_frames_advanced": 16000,
+      "volume_restored": true,
+      "human_audibility_and_earpiece_headset_paths": "not confirmed"
+    },
+    "graphics": {
+      "renderer": "PowerVR B-Series BXM-8-256",
+      "rgb_render_readback": true,
+      "gl_error": 0,
+      "physical_panel_refresh_and_quality": "untested"
+    },
+    "storage": {
+      "internal_bytes_verified": 4194304,
+      "internal_readback_matches": true,
+      "removable_card_tests": [
+        {
+          "removable": true,
+          "bytes_written_fsynced_read": 1048576,
+          "readback_matches": true,
+          "temporary_file_deleted": true
+        }
+      ],
+      "personal_files_accessed": false
+    },
+    "keystore": {
+      "aes_gcm_encrypt_decrypt": true,
+      "security_level": "TRUSTED_ENVIRONMENT",
+      "temporary_key_deleted": true,
+      "attestation": "untested"
+    },
+    "sensors": [
+      {
+        "type": 1,
+        "present": true,
+        "listener_registered": true,
+        "events": 320,
+        "variation_observed": true
+      },
+      {
+        "type": 4,
+        "present": true,
+        "listener_registered": true,
+        "events": 80,
+        "variation_observed": true
+      },
+      {
+        "type": 2,
+        "present": true,
+        "listener_registered": true,
+        "events": 32,
+        "variation_observed": true
+      },
+      {
+        "type": 5,
+        "present": true,
+        "listener_registered": true,
+        "events": 1,
+        "variation_observed": false
+      },
+      {
+        "type": 8,
+        "present": true,
+        "listener_registered": true,
+        "events": 2,
+        "variation_observed": false
+      },
+      {
+        "type": 11,
+        "present": true,
+        "listener_registered": true,
+        "events": 320,
+        "variation_observed": true
+      },
+      {
+        "type": 6,
+        "present": false,
+        "events": 0,
+        "variation_observed": false
+      },
+      {
+        "type": 19,
+        "present": true,
+        "listener_registered": true,
+        "events": 0,
+        "variation_observed": false
+      }
+    ],
+    "gps": {
+      "callback_registered": true,
+      "max_satellites_reported": 1,
+      "fix_count": 0,
+      "wait_seconds": 45,
+      "status": "no fix in current USB-connected setup; clearer sky test needed",
+      "coordinates_recorded": false
+    },
+    "nfc": {
+      "adapter_enabled": true,
+      "tag_detected": false,
+      "status": "reader-mode test had no tag; tag read unverified",
+      "payments": "untested"
+    },
+    "fingerprint": {
+      "feature_declared": true,
+      "authentication_readiness": 11,
+      "meaning": "BIOMETRIC_ERROR_NONE_ENROLLED",
+      "enrollment_and_authentication": "untested"
+    },
+    "cellular": {
+      "sim_ready": true,
+      "modem_count": 2,
+      "service_state": "OUT_OF_SERVICE",
+      "data_state": "DISCONNECTED",
+      "operator_registered": false,
+      "status": "currently unavailable; carrier/coverage/firmware cause not established"
+    },
+    "input_and_outputs": {
+      "injected_touch_events": 80,
+      "injected_touch_cells": 12,
+      "physical_touch_multitouch_and_buttons": "unconfirmed",
+      "vibration_request_accepted": true,
+      "vibration_and_torch_physical_confirmation": "not received",
+      "usb_adb_control_and_apk_transfers": "used successfully",
+      "usb_otg_mtp_wired_accessories": "untested",
+      "battery_power_attachment": "observed plugged and full",
+      "charging_rate_battery_endurance": "untested"
+    }
+  },
+  "cleanup": {
+    "temporary_tester_removed": true,
+    "hardware_settings_restored": true,
+    "display_power_setting_restored": true,
+    "no_unexpected_reboot": true,
+    "selinux_after": "Enforcing"
+  },
+  "privacy": {
+    "credentials_identifiers_coordinates_media_exported": false,
+    "published_content": "curated aggregate results only"
+  }
+}

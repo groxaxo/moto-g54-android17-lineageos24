@@ -42,12 +42,13 @@
   "limits": {
     "cellular": "SIM loaded; No service; pre-upgrade baseline unknown",
     "calls_mobile_data_ims": "not validated",
-    "camera_media_biometrics_bluetooth_nfc": "not fully validated",
+    "camera_media_biometrics_bluetooth_nfc": "See hardware-validation.json for bounded passes and remaining physical/accessory tests",
     "other_variants_and_stock_kernels": "not validated",
     "cts_vts_play_integrity": "not validated",
     "strict_neverallow_check": "inherited baseline failures remain; comparison showed no new failures",
     "full_personal_data_backup": "not made",
     "complete_reproducible_r6_builder_published": false,
     "flashable_images_published": false
-  }
+  },
+  "hardware_validation_report": "hardware-validation.json"
 }
