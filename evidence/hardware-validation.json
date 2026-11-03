@@ -219,5 +219,12 @@
   "privacy": {
     "credentials_identifiers_coordinates_media_exported": false,
     "published_content": "curated aggregate results only"
+  },
+  "cellular_follow_up": {
+    "revision": "r7",
+    "record": "cellular-validation.json",
+    "lte_and_ims_registration_after_restart": true,
+    "actual_calls_sms_untested": true,
+    "mobile_internet_verified": false
   }
 }

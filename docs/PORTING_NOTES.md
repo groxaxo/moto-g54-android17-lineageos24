@@ -55,4 +55,4 @@ System-only revisions used Android's native image manager to map only the inacti
 
 DSU's credential user-ID separation was preserved. AOSP notes that a GSI adds an offset to Gatekeeper user IDs; an empty shell read of a restricted GSI property is not proof that this separation is absent. Do not disable the isolation or reset shared secure storage to work around a credential failure.
 
-The final result is limited to [the published validation summary](../evidence/validation.json). Cellular service remains unresolved.
+The final result is limited to [the published validation summary](../evidence/validation.json). The later [cellular follow-up](CELLULAR.md) verifies LTE and IMS voice/SMS registration after restart; real calls/SMS remain untested and cellular HTTPS has not passed.

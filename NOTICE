@@ -8,3 +8,7 @@ hardware-interface material; see LICENSES/Apache-2.0.txt and CREDITS.md.
 
 Android, LineageOS, Motorola, and Trustonic names identify the relevant projects
 or hardware. No affiliation, endorsement, or official device support is claimed.
+
+The new TelephonyMetrics compatibility class carries an Apache-2.0 SPDX
+identifier. The remaining new tools and documentation use the repository MIT
+license. See CREDITS.md for the relevant upstream references.

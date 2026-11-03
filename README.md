@@ -4,7 +4,7 @@ Experimental port notes and reusable configuration patches for **Moto G54 5G, XT
 
 One device booted the unofficial LineageOS 24 Android 17 GSI, completed setup, saved a PIN, and unlocked its encrypted guest data after a normal restart. The installation uses **persistent Dynamic System Updates (DSU)** with **8 GiB of separate guest userdata**. The existing Android 16 system and data were retained.
 
-**This is a research and documentation release, not a downloadable ROM or a universal installer. Cellular service is unresolved: the tested device shows “No service.”** Compatibility with other G54 variants and stock kernels is unverified. Do not use `kiev` firmware: it is a different device.
+**This is a research and documentation release, not a downloadable ROM or a universal installer. LTE HOME registration and IMS voice/SMS capability registration now persist after restart. Actual calls/SMS remain untested, and cellular internet checks have not passed.** Compatibility with other G54 variants and stock kernels is unverified. Do not use `kiev` firmware: it is a different device.
 
 | Item | Observed result |
 | --- | --- |
@@ -18,8 +18,9 @@ One device booted the unofficial LineageOS 24 Android 17 GSI, completed setup, s
 | PIN and encrypted data | PIN saved; post-restart unlock reached `RUNNING_UNLOCKED` |
 | SELinux | Enforcing |
 | Wi-Fi | Connected and validated |
-| Cellular | SIM loaded, **No service**; prior service baseline unknown |
-| Calls / mobile data / IMS | Not validated |
+| Cellular | LTE HOME registration verified after normal restarts |
+| IMS / calls / SMS | IMS registered with voice/SMS/UT capabilities after restart; real calls/SMS untested |
+| Mobile internet | Cellular link obtained; HTTPS/validation failed |
 | Bluetooth | Classic and BLE discovery plus advertising passed; pairing/audio untested |
 | Main rear/front cameras | Preview and JPEG capture at 640×480 passed |
 | Video / audio | Hardware H.264 decode/encode and private H.264/AAC camera recording passed; audio I/O path passed |
@@ -35,6 +36,7 @@ Read these before attempting a port:
 - [Installation and recovery](docs/INSTALLATION.md): prerequisites, DSU workflow, and verification.
 - [What fixed the boot and PIN failures](docs/PORTING_NOTES.md): kernel control, VINTF, SELinux mapping, AVB, and Trustonic storage.
 - [Using the published patches](docs/BUILDING.md): exact scope of the included files and the incomplete build stages.
+- [Cellular follow-up](docs/CELLULAR.md): LTE preference, missing IMS integration, compatibility patch and verified limits.
 - [Hardware test matrix](docs/HARDWARE_TESTS.md): actual operations, partial results, and physical checks still needed.
 - [Privacy and bug reports](PRIVACY.md): what to keep out of public reports.
 - [Sources and licensing](CREDITS.md).

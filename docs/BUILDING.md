@@ -48,3 +48,7 @@ Those stages must be implemented and validated against the owner's actual system
 For an inactive DSU system update, use the native image-manager API, verify the exact image name/size and disabled state, and leave the guest userdata image unmapped. Back up the existing system, verify the full write and a remap readback, and verify unchanged DSU LP metadata before enabling it. Do not reuse another handset's device-mapper path; it is allocated dynamically.
 
 See [PORTING_NOTES.md](PORTING_NOTES.md) for the evidence behind each change and [INSTALLATION.md](INSTALLATION.md) for the actual validation boundary.
+
+## IMS compatibility stage
+
+The later [cellular follow-up](CELLULAR.md) adds a single shared-UID configuration file and a host-only `tools/patch_ims_telemetry.py` helper. The helper was run against the exact documented upstream IMS APK; signing verification and preservation of its original manifest, code and libraries passed. It produces only an IMS APK compatibility update and does not integrate the system XML, build the complete r7 image, or install anything on a phone. No binary or signing key is distributed here.

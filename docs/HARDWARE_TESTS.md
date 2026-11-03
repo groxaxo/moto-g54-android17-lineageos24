@@ -1,8 +1,8 @@
 # Hardware checks on r6
 
-These bounded tests ran on the same XT2343-2 / `cancunf` with Android 17 / API 37 on 2026-11-02–03 UTC. A temporary on-device app exercised actual APIs and data paths. The [curated machine-readable results](../evidence/hardware-validation.json) contain no credentials, device addresses, nearby names, location coordinates, pictures, or recordings.
+The broad matrix was collected on r6; cellular was retested on r7. These bounded tests ran on the same XT2343-2 / `cancunf` with Android 17 / API 37 on 2026-11-02–03 UTC. A temporary on-device app exercised actual APIs and data paths. The [curated machine-readable results](../evidence/hardware-validation.json) contain no credentials, device addresses, nearby names, location coordinates, pictures, or recordings.
 
-**A pass applies to the operation in the table. It does not certify every mode of that feature. Cellular service is still unavailable, and several checks require physical input or accessories.**
+**A pass applies to the operation in the table. It does not certify every mode of that feature. A later r7 follow-up verified LTE and IMS registration after restart; real calls/SMS and mobile internet are not established. Several checks require physical input or accessories.**
 
 | Feature | Actual test and result | Remaining boundary |
 | --- | --- | --- |
@@ -30,7 +30,7 @@ These bounded tests ran on the same XT2343-2 / `cancunf` with Android 17 / API 3
 | Touch/UI input | Injected gesture delivered 80 events across 12 grid cells | This is not a physical digitizer or multitouch test |
 | Vibration/torch | Vibration request accepted; torch-on callback confirmed | Physical feedback/brightness not confirmed by the owner |
 | USB/charging | USB ADB control and APK transfers used; battery reported plugged/full | MTP, OTG, charge rate and endurance untested |
-| Cellular | SIM ready; two modem slots reported; service out of service, data disconnected, no operator | Cause could involve carrier, coverage or firmware; prior baseline unknown |
+| Cellular, r7 follow-up | LTE HOME registration and IMS voice/SMS/UT capabilities verified after restart and PIN unlock | Actual calls/SMS untested; cellular-only HTTPS failed; see [CELLULAR.md](CELLULAR.md) |
 | Widevine | Framework reported L1 capability | No protected streaming, provisioning or certification test |
 
 The first encoder probe requested 160×120. The encoder advertised a minimum height of 160, so that configuration was invalid. A follow-up used its advertised color formats and supported 640×480 size and passed. The initial test error should not be reported as a broken encoder.

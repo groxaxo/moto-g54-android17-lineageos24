@@ -40,7 +40,7 @@
     "dsu_lp_metadata_unchanged": true
   },
   "limits": {
-    "cellular": "SIM loaded; No service; pre-upgrade baseline unknown",
+    "cellular": "r7 follow-up: LTE and IMS voice/SMS capabilities registered after restart; actual calls/SMS untested; cellular HTTPS failed",
     "calls_mobile_data_ims": "not validated",
     "camera_media_biometrics_bluetooth_nfc": "See hardware-validation.json for bounded passes and remaining physical/accessory tests",
     "other_variants_and_stock_kernels": "not validated",
@@ -50,5 +50,6 @@
     "complete_reproducible_r6_builder_published": false,
     "flashable_images_published": false
   },
-  "hardware_validation_report": "hardware-validation.json"
+  "hardware_validation_report": "hardware-validation.json",
+  "cellular_follow_up": "cellular-validation.json"
 }
